@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonsec v3 Deobfuscator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 80%;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+            resize: vertical;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #28a745;
+        }
+        .status.error {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Moonsec v3 Deobfuscation Tool</h1>
+        <textarea id="obfuscatedCode" placeholder="Paste obfuscated Lua code here..."></textarea><br><br>
+        <button onclick="deobfuscateCode()">Deobfuscate</button>
+        <h2>Deobfuscated Code:</h2>
+        <textarea id="deobfuscatedCode" readonly></textarea>
+        <div id="status" class="status"></div>
+    </div>
+
+    <script src="deobfuscator.js"></script>
+</body>
+</html>
